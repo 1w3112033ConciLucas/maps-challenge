@@ -24,7 +24,7 @@ const ChangeCallout = ({navigation}: Props) => {
                 navigation.navigate('Mapa', {inputCallout: inputCallout})
             }}
             >
-            <Text style={styles.inputText}></Text>
+            <Text style={styles.inputText}> Siguiente </Text>
             </TouchableOpacity>
         </View>
     )
@@ -37,17 +37,6 @@ const styles = StyleSheet.create({
       paddingHorizontal: 30,
       paddingTop:20,
       backgroundColor: '#AE97BA'
-    },
-    map: {
-      flex:1,
-      width: 326,
-      height: 504,
-    },
-    mapContainer: {
-      flex:1,
-      borderWidth:3,  
-      borderColor: '#A607F8', 
-      borderRadius:5,
     },
     button: {
       flex: 0,
@@ -68,7 +57,7 @@ const styles = StyleSheet.create({
       width:332
     },
     inputText: {
-      color:'white', 
+      color:'#fff', 
       fontSize: 20, 
       fontWeight: 'bold'
     }
