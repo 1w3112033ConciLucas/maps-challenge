@@ -6,7 +6,7 @@ const Stack = createNativeStackNavigator();
 
 export const StackNavigator = () => {
     return(
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerStyle:{backgroundColor: '#A607F8', }, headerTintColor:'#fff'}}>
             <Stack.Screen name="Mapa" component={Map}/>
             <Stack.Screen name="ChangeCallout" component={ChangeCallout}/>
         </Stack.Navigator>

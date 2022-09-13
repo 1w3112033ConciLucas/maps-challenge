@@ -103,8 +103,10 @@ const Map = ({navigation, route}: Props) => {
                   }}
                   pinColor="black"
                 >
-                  <Callout>
-                    <Text> `{marker.callOut}` </Text>
+                  <Callout tooltip>
+                    <View style={styles.callOut}>
+                      <Text style={styles.callOutText}> `{marker.callOut}` </Text>
+                    </View>
                   </Callout>
                 </Marker>
               )
@@ -147,6 +149,20 @@ const styles = StyleSheet.create({
     borderColor: '#A607F8', 
     borderRadius:5,
   },
+  callOut:{
+    backgroundColor: '#fff',
+    borderRadius: 6,
+    borderColor: '#ccc',
+    borderWidth: 0.5,
+    padding: 15,
+    width: 150,
+  },
+  callOutText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black', 
+    marginBottom: 5,
+  },
   button: {
     flex: 0,
     zIndex: 3,
@@ -163,7 +179,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 10,
     marginBottom: 25,
-    width:332
+    width:332,
+    fontSize:18,
   },
   inputText: {
     color:'white', 

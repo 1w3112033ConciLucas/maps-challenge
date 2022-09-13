@@ -10,28 +10,23 @@ const ChangeCallout = ({navigation}: Props) => {
     return (
         <View
         style={styles.container}>
-          <TextInput
-            placeholder='Nombre Consecionaria...'
-            style={styles.input}
-            onChangeText={(val) => {
-              setInputCallout(val);
-              console.log(JSON.stringify(val));
+            <TextInput
+                placeholder='Nombre Consecionaria...'
+                style={styles.input}
+                onChangeText={(val) => {
+                    setInputCallout(val);
+                    console.log(JSON.stringify(val));
+                }}
+            />
+            <TouchableOpacity
+            style={styles.button}
+            onPress={()=>{
+                navigation.navigate('Mapa', {inputCallout: inputCallout})
             }}
-            onSubmitEditing={() => {
-              //setSearchFlag(false);
-            }}
-          />
-           <TouchableOpacity
-          style={styles.button}
-          //disabled={searchFlag}
-          onPress={()=>{
-            //getData(),
-            navigation.navigate('Mapa', {inputCallout: inputCallout})
-          }}
-        >
-          <Text style={styles.inputText}>Continuar</Text>
-        </TouchableOpacity>
-       </View>
+            >
+            <Text style={styles.inputText}></Text>
+            </TouchableOpacity>
+        </View>
     )
 }
 
